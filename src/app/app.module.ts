@@ -10,19 +10,28 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ApiService } from './api.service';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GalleryComponent
+    GalleryComponent,
+    FormComponent
+   
   ],
   imports: [
-    
+        ReactiveFormsModule,
       // LazyLoadImageModule.forRoot({
       //   preset: intersectionObserverPreset
       // }),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+   
+   
+    
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

@@ -1,0 +1,55 @@
+button{
+    background-color: blueviolet;
+    
+}
+
+   
+
+.bg{
+   // background: url("https://media.istockphoto.com/photos/light-purple-defocused-blurred-motion-abstract-background-picture-id1138288769?k=20&m=1138288769&s=612x612&w=0&h=qJ233qtmMHje4XqJZxnSbTUfLo4-gLdqDGp4F51HQuo=");
+     background: url("https://media.gettyimages.com/videos/4k-abstract-particles-background-animation-loopable-video-id802662418?s=640x640");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.bg2{
+    background-color: white;
+    color: black;
+
+}
+.bg3{
+    padding-top: 10%; ;
+    height: 50vh;
+}
+img{
+    margin:20%;
+    margin-left: 30%;
+    height: 250px;
+    width: 300px;
+}
+.card {
+width: 400px;
+background-color: #fff;
+border: none;
+border-radius: 12px;
+}
+.form-control {
+border: 2px solid #eee;
+border-radius: 10px;
+}
+
+.form-control:focus {
+box-shadow: none;
+border: 2px solid #039BE5;
+}
+
+
+
+
+
+.confirm-button {
+height: 50px;
+border-radius: 10px;
+background-color: #9400D3;
+}
