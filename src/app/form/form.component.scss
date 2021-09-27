@@ -1,9 +1,15 @@
 button{
     background-color: blueviolet;
+    width: 300px;
     
 }
 
-   
+ .nm,.em,.msg, .btn{
+     width: 300px;
+     border: 2px solid #eee;
+     border-radius: 10px;
+ }  
+ 
 
 .bg{
    // background: url("https://media.istockphoto.com/photos/light-purple-defocused-blurred-motion-abstract-background-picture-id1138288769?k=20&m=1138288769&s=612x612&w=0&h=qJ233qtmMHje4XqJZxnSbTUfLo4-gLdqDGp4F51HQuo=");
@@ -16,17 +22,21 @@ button{
 .bg2{
     background-color: white;
     color: black;
+    
 
 }
 .bg3{
     padding-top: 10%; ;
-    height: 50vh;
+    height: 40vh;
 }
 img{
     margin:20%;
-    margin-left: 30%;
-    height: 250px;
-    width: 300px;
+    padding-left: 5%;  
+      margin-top: 25%;
+  margin-left: 30%;
+   // margin-bottom: 10%;
+    height: 150px;
+    width: 250px;
 }
 .card {
 width: 400px;

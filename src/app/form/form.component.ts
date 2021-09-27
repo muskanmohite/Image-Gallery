@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import{Router} from '@angular/router'
 
-import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { FormGroup, FormControl, Validators, FormBuilder, EmailValidator } from '@angular/forms'
 
 
 
@@ -12,13 +12,30 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 })
 
 
-export class FormComponent {
+export class FormComponent implements OnInit {
+  // name = new FormControl('');  
+ 
+  form!: FormGroup;
 
-constructor( private router:Router){}
-
-goToPage(pageName:string):void{
+constructor( private router:Router,
+  private formBuilder: FormBuilder){}
+  ngOnInit() {
+    this.form = this.formBuilder.group({
+      username: this.formBuilder.group({
+        name: ['', [Validators.required,Validators.maxLength]],
+        emails: ['', [Validators.required,Validators.email]],
     
-  alert("Thanks to reaching us");
+  })
+    });
+    this.form.valueChanges.subscribe(data => console.log(data));
+  }
+ 
+
+
+
+  send(pageName:string):void{
+    
+  alert("THANKS FOR REACHING US");
  
   setTimeout(() =>{ 
   this.router.navigate([`${pageName}`]); }, 4000);

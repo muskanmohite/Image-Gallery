@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
+
+  title="Image-Gallery"
   constructor(private apiService: ApiService,
               private routes: Router) {}
   Items: undefined;
