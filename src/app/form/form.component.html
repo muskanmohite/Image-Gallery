@@ -37,7 +37,7 @@
      
      <span *ngIf="(name.dirty || name.touched) && name.invalid" 
      >
-     <div ng-show="form.errors">
+     <div class="text-danger" ng-show="form.errors">
       Name is required.
     </div> 
      </span>
@@ -54,7 +54,7 @@
     
   <span *ngIf="(emails.dirty || emails.touched) && emails.invalid" 
   >
-  <div ng-show="form.errors">
+  <div class="text-danger" ng-show="form.errors">
    Email is required.
  </div> 
   </span>
