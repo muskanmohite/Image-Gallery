@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
    
   ],
   imports: [
+        
         ReactiveFormsModule,
       // LazyLoadImageModule.forRoot({
       //   preset: intersectionObserverPreset

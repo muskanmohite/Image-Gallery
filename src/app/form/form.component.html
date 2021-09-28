@@ -14,26 +14,52 @@
           <div class="card px-1 py-4">
            <div class="card-body">
 
- <form [formGroup]="form" (ngSubmit)="send('gallery')">
+ <form [formGroup]="form"  (ngSubmit)="send('gallery')" >
    
   <h6 class="card-title mb-3">Get in touch</h6>
-  
-  <div formGroupName="username">
+<!--   
+  <div formGroupName="username"> -->
+    
     <div class="row">
       <div class="col-sm-12">
+       
         <label for="name" >Name</label>
         <br>
-  <input class="nm"
-  type="text" formControlName="name"  placeholder="Enter your name" required>
-      </div>
+  <input 
+  type="text" class="form-control"
+   formControlName="name" id="name" 
+     placeholder="Enter your name" 
+     >
+       <!-- <span  *ngIf="form.errors?.required "
+      class="help-block">
+      name is required
+    </span> -->
+     
+     <span *ngIf="(name.dirty || name.touched) && name.invalid" 
+     >
+     <div ng-show="form.errors">
+      Name is required.
+    </div> 
+     </span>
+
+     
+</div>
     </div>
   <br>
   <div class="row">
     <div class="col-sm-12">
       <label for="email">Email</label>
       <br>
-  <input  class="em" type="text" formControlName="emails"  placeholder="Enter your email"  required>
-    </div>
+  <input   type="text" class="form-control" formControlName="emails" id="emails" placeholder=" Enter your email"  required>
+    
+  <span *ngIf="(emails.dirty || emails.touched) && emails.invalid" 
+  >
+  <div ng-show="form.errors">
+   Email is required.
+ </div> 
+  </span>
+
+</div>
   </div>
   <br>
   <div class="row">
@@ -41,20 +67,14 @@
 
      <div class="form-group">
        <label for="msg">Message</label><br>
-  <textarea  rows="3" class="msg" placeholder="Message" required></textarea>
+  <textarea class="form-control" rows="3"  placeholder="Message" required></textarea>
      </div>
     </div></div>
   <br>
   
-  <!-- <input type="submit"
-  ng-disabled="form.user.$dirty && form.user.$invalid ||  
-           form.email.$dirty && form.email.$invalid"> -->
-<!--   
-   <i *ngIf="form.get('username').valid && form.valid"></i> -->
   <button type="submit" class=" btn btn-primary" [disabled]="!form.valid">SEND</button>
   
- 
-</div>
+
 </form>
   </div>
 </div>
